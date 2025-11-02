@@ -1,0 +1,177 @@
+/* --- Global Styles --- */
+:root {
+    --primary-color: #005a9c; /* A professional blue */
+    --light-gray: #f4f4f4;
+    --dark-gray: #333;
+    --white: #ffffff;
+    --box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* --- Header and Navigation --- */
+header {
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav .logo h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+nav .logo a {
+    text-decoration: none;
+    color: var(--dark-gray);
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav .nav-links li {
+    margin-left: 25px;
+}
+
+nav .nav-links a {
+    font-weight: bold;
+    font-size: 1rem;
+    padding-bottom: 5px;
+}
+
+nav .nav-links a.active {
+    /* Highlights the current page */
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+}
+
+/* --- Main Content Sections --- */
+#bio, .resume-section {
+    background: var(--white);
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 20px auto;
+    border: 5px solid var(--primary-color);
+}
+
+.bio-list {
+    list-style: none;
+    padding: 0;
+}
+
+.bio-list li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+/* --- Resume Page Styles --- */
+.resume-section h2 {
+    border-bottom: 2px solid var(--light-gray);
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.resume-item {
+    margin-bottom: 20px;
+}
+
+.resume-item h3 {
+    margin: 0;
+}
+
+.resume-item p {
+    margin: 5px 0;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-list li {
+    background: var(--light-gray);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--dark-gray);
+    color: var(--white);
+    margin-top: 30px;
+}
+
+/* --- Responsive Design for Mobile --- */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+    }
+    
+    nav .nav-links {
+        margin-top: 15px;
+        width: 100%;
+        justify-content: space-around;
+    }
+    
+    nav .nav-links li {
+        margin-left: 0;
+    }
+}
